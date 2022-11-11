@@ -1,0 +1,47 @@
+Commands:
+
+(0) mongo -> Start mongo in cmd
+(0) mongod -> start service in new terminal if by default not started
+(0) cls -> clear screen
+(1) show dbs -> Shows all databases
+(2) show collections -> shows all documents (collection of documents is known as collections)
+(3) use <db name> -> creates new database
+(4) db.students.insertOne() -> Create/Insert a new Collection and insert a new document
+    Ex:- 
+    db.students.insertOne({name:"jai parkash",favColor:"black"})
+(5) db.students.find() -> Shows all documents inside collections
+(6) db.students.insertMany() -> Create/Insert new documents from array list of objects.
+    Ex:- 
+    db.students.insertMany([{name:"jai parkash",age:20},{name:"karan",age:20}])
+(7) db.students.find({name:"jai"}) -> finds perticular document where object matches
+(8) db.students.find({name:"jai"}).limit(1) -> finds perticular document where object matches (if multiple documents available)
+(9) db.students.findOne({name:"jai"}) -> finds first perticular document where object matches (if multiple documents available)
+(10) db.students.updateOne() -> update first document where condition matches
+    Ex:-
+    db.students.updateOne({name:"jai parkash"},{$set:{name:"jai parkash maurya"}})
+(11) db.students.updateMany() -> update all document where condition matches
+    Ex:-
+    db.students.updateMany({name:"karan"},{$set:{name:"karan sharma"}})
+(12) db.students.deleteOne() -> delete first document where condition matches
+    Ex:-
+    db.students.deleteOne({name:"Lodhesh"})
+(13) db.students.deleteMany() -> delete all documents where condition matches
+    Ex:-
+    db.students.deleteMany({name:"karan sharma"})
+(14) db.students.deleteMany({}) -> delete all documents from collection
+
+------------------------------------mongoDBCompass-------------------------------
+
+Url - mongodb://localhost:27017/{db name}
+
+//insert document from Compass
+/** 
+* Paste one or more documents here
+*/
+{
+  "_id": {
+    "$oid": "636e1318697910860e33da21"
+  },
+"name":"om",
+"age": 24
+}
